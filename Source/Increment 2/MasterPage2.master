@@ -1,0 +1,93 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage2.master.cs" Inherits="MasterPage2" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+     <link rel="stylesheet" href="style.css" type="text/css" />
+     <style type="text/css">._css3m{display:none}</style>
+        <script src="includes/jquery-1.10.2.min.js" type="text/javascript"></script>
+     <style>
+    .tabular
+    {
+    	-webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+    }
+    
+    .ATMtabular
+    {
+    	-webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        background-image:url(images/ATM.jpg); 
+        height:300;
+    }
+    
+    .intabular
+    {
+    	-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+   background-color:White;
+    }
+    .sidebar
+    {
+    	-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+  background-color:White;
+    }
+    </style>
+    
+</head>
+<body style="background-image:url(images/brown-95272.jpg);">
+    <form id="form1" runat="server">
+     <div>
+    <center>
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+    <table class="tabular" width="80%">
+    
+    <tr>
+    <td colspan="2">
+        <img src="images/banner1.png" width="100%" class="intabular"/>
+    </td>
+    </tr>
+    
+    <tr>
+    <td colspan="2">
+    <asp:Panel ID="Panel1" runat="server">
+        <ul id="css3menu1" class="topmenu" class="intabular" type="disc">
+           
+            <li class="topfirst"><a href="AddDet.aspx" style="height:16px;line-height:16px;">Add Income</a></li>
+	        <li class="topmenu"><a href="AddExp.aspx" style="height:16px;line-height:16px;">Add Expense</a></li>
+	        <li class="topmenu"><a href="ViewInc.aspx" style="height:16px;line-height:16px;">View Income</a></li>
+            <li class="topmenu"><a href="ViewExp.aspx" style="height:16px;line-height:16px;">View Expense</a></li>
+            <li class="topmenu"><a href="chart.aspx" style="height:16px;line-height:16px;">Income-Expense Curve</a></li>
+	       <li class="topmenu"><a href="ViewBaln.aspx" style="height:16px;line-height:16px;">View Balance</a></li>
+           <li class="topmenu"><a href="ViewSpExp.aspx" style="height:16px;line-height:16px;">View Other Expenses</a></li>
+            <li class="toplast"><a href="Logout.aspx" style="height:16px;line-height:16px; ">Logout</a></li>
+	       
+        </ul>
+    </asp:Panel>
+    </td>
+    </tr>
+    
+    <tr>
+    <td colspan="2" class="intabular"> <center><asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        </center>
+        </td>
+    </tr>
+   
+    <tr>
+    <td colspan="2" class="intabular"
+            style="background-color: #FFFFFF; color: #0099FF; font-weight: bold;" 
+            align="right">
+        Expense Tracker System
+    </center>
+    </div>
+    </form>
+</body>
+</html>
