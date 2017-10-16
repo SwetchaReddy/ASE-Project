@@ -32,3 +32,4 @@ public partial class ViewInc : System.Web.UI.Page
         GridView1.DataBind();
     }
 }
+//a
